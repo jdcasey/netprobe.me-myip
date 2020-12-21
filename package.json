@@ -1,0 +1,14 @@
+{
+  "name": "myip",
+  "version": "1.0.0",
+  "description": "show your own public IP address",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": "John Casey <jdcasey@commonjava.org> (http://johnofalltrades.name/)",
+  "license": "MIT",
+  "dependencies": {
+    "escape-html": "^1.0.3"
+  }
+}
