@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build-and-push:
-    name: Publish to PyPI
+    name: Deploy
     environment: google-functions
     runs-on: ubuntu-latest
 
@@ -16,4 +16,4 @@ jobs:
         with:
           name: myip
           runtime: nodejs10
-          credentials: ${{ secrets.GCP_SA_JSON }}
+          credentials: ${{ secrets.gcp_credentials }}
