@@ -1,10 +1,13 @@
-exports.myip = (request, response) => {
-	let ip = (request.headers['x-forwarded-for'] ||
-		request.connection.remoteAddress ||
-		request.socket.remoteAddress ||
-		request.connection.socket.remoteAddress).split(",")[0];
+exports.myip = (req, res) => {
+	res.set('Access-Control-Allow-Origin', "*");
+  res.set('Access-Control-Allow-Methods', 'GET');
 
-	response.json({
+	let ip = (req.headers['x-forwarded-for'] ||
+		req.connection.remoteAddress ||
+		req.socket.remoteAddress ||
+		req.connection.socket.remoteAddress).split(",")[0];
+
+	res.json({
 		ipv4: ip
 	});
 };
